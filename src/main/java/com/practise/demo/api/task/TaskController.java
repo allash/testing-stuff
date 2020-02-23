@@ -28,7 +28,7 @@ public class TaskController {
     @GetMapping
     public ModelAndView getTasks() {
         List<DtoGetTaskResponse> tasks = taskService.getTasks();
-        ModelAndView model =  new ModelAndView("task_main", "task", new DtoCreateTaskRequest());
+        ModelAndView model = new ModelAndView("task_main", "task", new DtoCreateTaskRequest());
         model.addObject("tasks", tasks);
         model.addObject("derp", "derp");
         return model;
