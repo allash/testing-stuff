@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'com.practise'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.31'
+    compile group: 'org.eclipse.jdt.core.compiler', name: 'ecj', version: '4.6.1'
+    //compile group: 'javax.servlet.jsp.jstl', name: 'jstl', version: '1.2'
+
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.2'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.23.4'
+}
+
+test {
+    useJUnitPlatform()
+}
