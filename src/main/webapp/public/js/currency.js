@@ -13,6 +13,7 @@ $(document).ready(function () {
             url: '/currencies',
             error: function (e) {
                 console.log('error', e);
+                $('#error').text(e.responseText);
             },
             success: function (data) {
                 console.log('success', data);

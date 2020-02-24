@@ -35,6 +35,7 @@
                         </td>
                         <td>
                             <p id="result">0</p>
+                            <p id="error"></p>
                         </td>
                     </tr>
                 </tbody>
